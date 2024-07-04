@@ -1,9 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/shared/ui/tabs/tabs"
 import { LoginForm } from "./LoginForm"
 import { RegistrationForm } from "./RegistrationForm"
-import { getAuth, onAuthStateChanged } from "firebase/auth"
-import { auth, db } from "@/app/lib/firebase"
-import { doc, getDoc } from "firebase/firestore"
 
 export const AuthContainer = () => {
 

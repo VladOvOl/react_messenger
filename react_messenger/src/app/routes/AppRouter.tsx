@@ -7,9 +7,9 @@ import { useEffect } from 'react'
 import { doc, getDoc } from 'firebase/firestore'
 import Cookies from 'js-cookie'
 import { db } from '../lib/firebase'
-import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { addUser } from '@/entities/user/store/userSlice'
-import { RootState } from '../store/store'
+import { useAppDispatch} from '../store/hooks'
+import { addUser, IUser } from '@/entities/user/store/userSlice'
+
 
 
 const AppRouter = () => {
@@ -28,7 +28,7 @@ const AppRouter = () => {
   },[user.token])
   */
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state:RootState) => state.userSlice.user)
+  //const user = useAppSelector((state:RootState) => state.userSlice.user)
   const {isAuth} = useAuth()
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const AppRouter = () => {
           console.log(docSnap.data())
           console.log("App1")
           if(docSnap.data()){
-            dispatch(addUser(docSnap.data()))
+            dispatch(addUser(docSnap.data() as IUser))
             console.log("App2")
           } 
         }

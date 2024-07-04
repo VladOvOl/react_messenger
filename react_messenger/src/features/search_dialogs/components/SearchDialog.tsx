@@ -1,5 +1,5 @@
 import { Input } from "@/shared/ui/input/input"
-import { useEffect, useState } from "react"
+import {useState } from "react"
 import {X, Search} from 'lucide-react'
 
 export const SearchDialog = () => {
