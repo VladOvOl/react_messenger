@@ -1,0 +1,1 @@
+export {InputMessagePanel} from './components/InputMessagePanel'

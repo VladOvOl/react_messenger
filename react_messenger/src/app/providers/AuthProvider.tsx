@@ -29,7 +29,7 @@ export const AuthProvider = ({children}:IProps) => {
   const [isAuth,setIsAuth] = useState(!!Cookies.get('token'))
 
   const addToken = (token:string) => {
-    Cookies.set('token', token, { expires: 7, secure: true });
+    Cookies.set('token', token, { expires: 1, secure: true });
     setIsAuth(true)
   }
 

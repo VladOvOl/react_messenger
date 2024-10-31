@@ -1,0 +1,1 @@
+export {ChatsListContainer} from './components/ChatsListContainer'

@@ -7,9 +7,13 @@ import { Card } from "@/shared/ui/card/ui/card"
 import { getAuth, signOut } from "firebase/auth"
 import {LogOut} from 'lucide-react'
 
-export const AvatarShortInfo = () => {
+type Props = {
+  className:string
+}
 
-  
+
+export const AvatarShortInfo = ({className}:Props) => {
+
   const {removeToken} = useAuth()
   const user = useAppSelector((state:RootState) => state.userSlice.user)
   const onClick = async () => {
@@ -22,7 +26,7 @@ export const AvatarShortInfo = () => {
   }
 
   return (
-    <Card className="w-full h-[10%] flex items-center gap-2 p-2">
+    <Card className={className}>
       <Avatar 
         className='h-14 w-14'>
         <AvatarImage src="https://github.com/shadcn.png" />

@@ -1,0 +1,1 @@
+export {NavMobileFooter} from './componets/NavMobileFooter'

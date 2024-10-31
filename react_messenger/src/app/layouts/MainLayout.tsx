@@ -14,13 +14,13 @@ const MainLayout = () => {
       >
         <nav 
           className='w-[29%] h-full 
-            mobile:w-full mobile:h-[10%]'
+            mobile:w-full mobile:h-[100%]'
         >
-          <SideBar/>
+          <SideBar className='className="w-full h-full p-3 flex flex-col justify-between rounded-2xl gap-3'/>
         </nav>
         <Card 
           className='w-[70%] h-full p-3 rounded-2xl 
-            mobile:w-full'
+            mobile:hidden'
         >
           <Outlet/>
         </Card>

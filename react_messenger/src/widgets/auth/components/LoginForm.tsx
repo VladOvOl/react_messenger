@@ -29,8 +29,12 @@ export const LoginForm = () => {
   
   const onSubmit = async(data:ILoginForm) => {
     try {
-      const token = await loginUser(data)
-      addToken(token)
+      const response = await loginUser(data)
+      if(response.status==="success"){
+        addToken(response.token)
+      }else{
+        alert(response.errorMessage)
+      }
     } catch (error) {
       console.log('LoginForm')
     }

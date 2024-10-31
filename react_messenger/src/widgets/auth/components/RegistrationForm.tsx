@@ -22,10 +22,12 @@ export const RegistrationForm = () => {
 
   const onSubmit = async (data:IRegistrationForm) => {
     try{
-      console.log(data)
-      const token = await registrationUser(data)
-      addToken(token)
-    
+      const response = await registrationUser(data)
+      if(response.status==="success"){
+        addToken(response.token)
+      }else{
+        alert(response.errorMessage)
+      }
     }catch(errors){
       alert('RegistrationForm')
     }

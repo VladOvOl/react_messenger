@@ -16,7 +16,7 @@ export const AppProvider = ({children}: Props) => {
     <Provider store={store}>
       <AuthProvider>
         <BrowserRouter>
-          <ThemeProvider defaultTheme={'light'} storageKey="vite-ui-theme">
+          <ThemeProvider defaultTheme={'system'} storageKey="vite-ui-theme">
           {children} 
           </ThemeProvider>
       </BrowserRouter>

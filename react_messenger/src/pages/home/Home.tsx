@@ -1,10 +1,11 @@
+import { Chat } from "@/widgets/chat"
 
 
 const Home = () => {
 
   return (
     <>
-      <button>Ckick</button>
+      <Chat/>
     </>
 
   )
